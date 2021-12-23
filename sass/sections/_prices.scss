@@ -1,0 +1,24 @@
+.prices {
+  background-color: $img-background;
+  padding: 50px 0;
+
+  &__list {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  &__card {
+    width: 150px;
+    border: 2px solid $red-color;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 18px;
+  }
+
+  &__amount {
+    font-weight: bold;
+  }
+}

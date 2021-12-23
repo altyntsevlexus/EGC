@@ -1,0 +1,21 @@
+.main {
+  background-image: linear-gradient(rgba(246, 242, 242, 0.9), rgba(246, 242, 242, 0.9)),
+    url("../images/products/b1.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding-top: 120px;
+
+  &__poster {
+    display: none;
+    position: absolute;
+    width: 550px;
+    height: auto;
+    right: 0;
+    object-fit: cover;
+
+    @media (min-width: 1200px) {
+      display: block;
+    }
+  }
+}
