@@ -1,5 +1,5 @@
 .prices {
-  background-color: $img-background;
+  background-color: $light;
   padding: 50px 0;
 
   &__list {
@@ -19,6 +19,6 @@
   }
 
   &__amount {
-    font-weight: bold;
+    font-weight: 700;
   }
 }

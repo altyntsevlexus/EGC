@@ -1,11 +1,11 @@
 .footer {
-  height: 120px;
   padding: 25px 0;
-  background-color: $dark-background;
-  color: white;
+  background-color: $dark;
+  color: $white;
   display: flex;
 
   &__container {
+    @extend %flex-container;
     gap: 20px;
   }
 
@@ -16,13 +16,15 @@
   }
 
   &__circle {
-    background-color: $img-background;
     width: 40px;
     height: 40px;
     border-radius: 50%;
     text-align: center;
-    background-size: 70%;
-    background-position: center;
-    background-repeat: no-repeat;
+    background: {
+      color: $white;
+      size: 70%;
+      position: center;
+      repeat: no-repeat;
+    }
   }
 }

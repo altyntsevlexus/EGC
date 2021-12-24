@@ -1,8 +1,8 @@
 .contacts {
   &__container {
+    @extend %flex-container;
     gap: 30px;
-
-    @media (min-width: 1200px) {
+    @media (min-width: $desktop) {
       height: 500px;
     }
   }
@@ -11,9 +11,9 @@
     height: 300px;
     width: 100%;
     max-width: 740px;
-    color: #ffffff;
+    color: $white;
 
-    @media (min-width: 1200px) {
+    @media (min-width: $desktop) {
       height: 100%;
       flex-grow: 1;
       width: initial;
@@ -54,7 +54,7 @@
     border: none;
     padding: 10px;
     border-radius: 5px;
-    background-color: lightgray;
+    background-color: #d3d3d3;
     outline: none;
   }
   button {

@@ -1,7 +1,8 @@
 .team {
   &__container {
+    @extend %flex-container;
     gap: 10px;
-    @media (min-width: 1200px) {
+    @media (min-width: $desktop) {
       gap: 100px;
       height: 400px;
     }
@@ -21,7 +22,7 @@
     flex-wrap: wrap;
     gap: 15px;
 
-    @media (min-width: 1200px) {
+    @media (min-width: $desktop) {
       justify-content: space-between;
     }
   }
@@ -33,7 +34,7 @@
         width: auto;
         height: 300px;
 
-        @media (min-width: 1200px) {
+        @media (min-width: $desktop) {
           height: 100%;
         }
       }
@@ -45,7 +46,7 @@
           opacity: 1;
         }
 
-        @media (min-width: 1200px) {
+        @media (min-width: $desktop) {
           height: 170px;
         }
       }
@@ -61,8 +62,8 @@
     position: absolute;
     opacity: 0;
     bottom: 0;
-    background-color: $dark-background;
-    color: white;
+    background-color: $dark;
+    color: $white;
     text-align: center;
     width: 100%;
     line-height: 40px;

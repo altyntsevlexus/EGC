@@ -37,13 +37,13 @@
     max-height: 100vh;
     max-width: 100vw;
   }
-}
 
-.lightbox.is-open {
-  opacity: 1;
-  pointer-events: initial;
-}
+  &__is-open {
+    opacity: 1;
+    pointer-events: initial;
 
-.lightbox.is-open .lightbox__content {
-  transform: scale(1);
+    .lightbox__content {
+      transform: scale(1);
+    }
+  }
 }

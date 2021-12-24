@@ -1,9 +1,14 @@
 .main {
-  background-image: linear-gradient(rgba(246, 242, 242, 0.9), rgba(246, 242, 242, 0.9)),
-    url("../images/products/b1.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
+  &__container {
+    @extend %flex-container;
+  }
+
+  background: {
+    image: linear-gradient(rgba(246, 242, 242, 0.9), rgba(246, 242, 242, 0.9)), url("../images/products/b1.jpg");
+    size: cover;
+    repeat: no-repeat;
+    position: center;
+  }
   padding-top: 120px;
 
   &__poster {
@@ -14,7 +19,7 @@
     right: 0;
     object-fit: cover;
 
-    @media (min-width: 1200px) {
+    @media (min-width: $desktop) {
       display: block;
     }
   }

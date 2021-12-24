@@ -5,7 +5,7 @@
     flex-wrap: wrap;
     gap: 15px;
 
-    @media (min-width: 1200px) {
+    @media (min-width: $desktop) {
       justify-content: space-between;
       gap: 30px;
     }
@@ -18,7 +18,7 @@
     gap: 10px;
     max-width: 200px;
 
-    @media (min-width: 1200px) {
+    @media (min-width: $desktop) {
       max-width: 250px;
     }
   }

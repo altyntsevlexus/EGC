@@ -1,28 +1,32 @@
 .header {
   position: fixed;
-  background-color: $dark-background;
-  color: white;
+  background-color: $dark;
+  color: $white;
   margin-bottom: 0;
   width: 100%;
   z-index: 100;
 
-  @media (min-width: 1200px) {
+  @media (min-width: $desktop) {
     position: absolute;
-    color: $dark-background;
+    color: $dark;
     background-color: transparent;
   }
+}
 
-  &__navigation {
-    display: flex;
-    justify-content: space-around;
-    max-width: 1000px;
-    margin: 0 auto;
-    padding-left: 0;
+.navigation {
+  display: flex;
+  justify-content: space-around;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding-left: 0;
 
-    &--mobile {
-      flex-direction: column;
-      display: none;
-    }
+  &--mobile {
+    flex-direction: column;
+    display: none;
+  }
+
+  &--dropped {
+    display: block;
   }
 
   &__item {
@@ -31,7 +35,7 @@
     text-align: center;
     line-height: 90px;
     text-transform: uppercase;
-    font-weight: bold;
+    font-weight: 700;
     cursor: pointer;
 
     &--mobile {
@@ -43,7 +47,7 @@
       color: $red-color;
     }
 
-    @media (min-width: 1200px) {
+    @media (min-width: $desktop) {
       display: block;
 
       &--mobile {

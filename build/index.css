@@ -330,6 +330,20 @@ template {
   display: none;
 }
 
+.footer__container, .contacts__container, .team__container, .main__container {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+}
+@media (min-width: 1200px) {
+  .footer__container, .contacts__container, .team__container, .main__container {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+
 .lightbox {
   position: fixed;
   top: 0;
@@ -367,13 +381,11 @@ template {
   max-height: 100vh;
   max-width: 100vw;
 }
-
-.lightbox.is-open {
+.lightbox__is-open {
   opacity: 1;
   pointer-events: initial;
 }
-
-.lightbox.is-open .lightbox__content {
+.lightbox__is-open .lightbox__content {
   transform: scale(1);
 }
 
@@ -382,7 +394,7 @@ template {
   height: 60px;
   border-radius: 5px;
   font-size: 18px;
-  font-weight: bold;
+  font-weight: 700;
   border: 3px solid #f46072;
   outline: none;
   cursor: pointer;
@@ -392,7 +404,7 @@ template {
 }
 .button--c--filled {
   background-color: #f46072;
-  color: white;
+  color: #ffffff;
 }
 .button--c--filled:hover {
   background-color: inherit;
@@ -404,7 +416,7 @@ template {
 }
 .button--c--transparent:hover {
   background-color: #f46072;
-  color: white;
+  color: #ffffff;
 }
 .button__scroll-top {
   position: fixed;
@@ -425,10 +437,8 @@ template {
   transition-duration: 0.2s;
   margin: 0;
   padding: 0;
-}
-
-body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-family: Roboto, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 16px;
 }
 
 li {
@@ -441,6 +451,33 @@ a {
   display: block;
 }
 
+h1 {
+  font-size: 40px;
+}
+@media (min-width: 1200px) {
+  h1 {
+    font-size: 60px;
+  }
+}
+
+h2 {
+  font-size: 30px;
+}
+@media (min-width: 1200px) {
+  h2 {
+    font-size: 40px;
+  }
+}
+
+h3 {
+  font-size: 20px;
+}
+@media (min-width: 1200px) {
+  h3 {
+    font-size: 30px;
+  }
+}
+
 .wrapper {
   padding: 0 20px;
   max-width: 1170px;
@@ -450,20 +487,6 @@ a {
 @media (min-width: 1200px) {
   .wrapper {
     padding: 0;
-  }
-}
-
-.flex-content {
-  position: relative;
-  display: flex;
-  justify-content: space-between;
-  flex-direction: column;
-  align-items: center;
-}
-@media (min-width: 1200px) {
-  .flex-content {
-    flex-direction: row;
-    flex-wrap: wrap;
   }
 }
 
@@ -511,20 +534,7 @@ a {
   text-transform: uppercase;
   margin-top: 0;
   margin-bottom: 40px;
-}
-.title__name_h1 {
-  font-size: 40px;
-}
-@media (min-width: 1200px) {
-  .title__name_h1 {
-    font-size: 60px;
-  }
-}
-.title__name_h2 {
-  font-size: 40px;
-}
-.title__name_h3 {
-  font-size: 30px;
+  font-weight: 700;
 }
 .title__description {
   font-size: 16px;
@@ -540,7 +550,7 @@ a {
 .header {
   position: fixed;
   background-color: #111123;
-  color: white;
+  color: #ffffff;
   margin-bottom: 0;
   width: 100%;
   z-index: 100;
@@ -552,38 +562,42 @@ a {
     background-color: transparent;
   }
 }
-.header__navigation {
+
+.navigation {
   display: flex;
   justify-content: space-around;
   max-width: 1000px;
   margin: 0 auto;
   padding-left: 0;
 }
-.header__navigation--mobile {
+.navigation--mobile {
   flex-direction: column;
   display: none;
 }
-.header__item {
+.navigation--dropped {
+  display: block;
+}
+.navigation__item {
   display: none;
   margin: 0;
   text-align: center;
   line-height: 90px;
   text-transform: uppercase;
-  font-weight: bold;
+  font-weight: 700;
   cursor: pointer;
 }
-.header__item--mobile {
+.navigation__item--mobile {
   display: block;
 }
-.header__item:hover {
+.navigation__item:hover {
   font-size: 20px;
   color: #f46072;
 }
 @media (min-width: 1200px) {
-  .header__item {
+  .navigation__item {
     display: block;
   }
-  .header__item--mobile {
+  .navigation__item--mobile {
     display: none;
   }
 }
@@ -628,7 +642,7 @@ a {
   font-size: 18px;
 }
 .prices__amount {
-  font-weight: bold;
+  font-weight: 700;
 }
 
 .benefits__list {
@@ -681,14 +695,13 @@ a {
 .trainings__video {
   text-align: center;
   margin: 0 auto 10px;
-  width: 360px;
-  height: 210px;
+  width: 100%;
+  height: 315px;
 }
 @media (min-width: 1200px) {
   .trainings__video {
     width: 560px;
-    height: 315px;
-    margin: 0 auto 60px;
+    margin: 0 auto 40px;
   }
 }
 
@@ -753,7 +766,7 @@ a {
   opacity: 0;
   bottom: 0;
   background-color: #111123;
-  color: white;
+  color: #ffffff;
   text-align: center;
   width: 100%;
   line-height: 40px;
@@ -815,7 +828,7 @@ a {
   border: none;
   padding: 10px;
   border-radius: 5px;
-  background-color: lightgray;
+  background-color: #d3d3d3;
   outline: none;
 }
 .contact-form button {
@@ -823,10 +836,9 @@ a {
 }
 
 .footer {
-  height: 120px;
   padding: 25px 0;
   background-color: #111123;
-  color: white;
+  color: #ffffff;
   display: flex;
 }
 .footer__container {
@@ -838,11 +850,11 @@ a {
   justify-content: space-between;
 }
 .footer__circle {
-  background-color: #f6f2f2;
   width: 40px;
   height: 40px;
   border-radius: 50%;
   text-align: center;
+  background-color: #ffffff;
   background-size: 70%;
   background-position: center;
   background-repeat: no-repeat;

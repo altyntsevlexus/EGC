@@ -1,9 +1,10 @@
-@import "_normalize.scss";
-@import "shared/_variables.scss";
-@import "shared/_placeholders.scss";
+@import "utils/_normalize.scss";
+@import "utils/_variables.scss";
+@import "utils/_placeholders";
+
 @import "shared/_lightbox.scss";
 @import "shared/_button.scss";
-@import "_base.scss";
+@import "shared/_base.scss";
 
 @import "sections/_header.scss";
 @import "sections/_main.scss";
