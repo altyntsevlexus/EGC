@@ -590,7 +590,6 @@ h3 {
   display: block;
 }
 .navigation__item:hover {
-  font-size: 20px;
   color: #f46072;
 }
 @media (min-width: 1200px) {
@@ -653,7 +652,6 @@ h3 {
 }
 @media (min-width: 1200px) {
   .benefits__list {
-    justify-content: space-between;
     gap: 30px;
   }
 }
@@ -663,12 +661,7 @@ h3 {
   align-items: center;
   text-align: center;
   gap: 10px;
-  max-width: 200px;
-}
-@media (min-width: 1200px) {
-  .benefits__card {
-    max-width: 250px;
-  }
+  max-width: 350px;
 }
 .benefits__img {
   max-width: 55px;
